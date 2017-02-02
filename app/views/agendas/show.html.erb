@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @agenda.nome %>
+</p>
+
+<p>
+  <strong>Contato:</strong>
+  <%= @agenda.contato %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @agenda.telefone %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @agenda.celular %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @agenda.email %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @agenda.endereco %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @agenda.cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @agenda.estado %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @agenda.cep %>
+</p>
+
+<%= button_to 'Editar', edit_agenda_path(@agenda), :class => "button", :method => :get  %> |
+<%= button_to 'Voltar', agendas_path, :class => "button", :method => :get  %>

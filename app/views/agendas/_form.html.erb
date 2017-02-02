@@ -1,0 +1,64 @@
+<%= form_for(agenda) do |f| %>
+  <% if agenda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agenda.errors.count, "erro") %> impediram de salvar este cadastro:</h2>
+
+      <ul>
+      <% agenda.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="panel panel-default" style="margin:10%; margin-top:1%">
+  <div class="panel-heading">Preencha todos os campos corretamente</div>
+  <div class="panel-body">
+
+    <div class="form-group">
+      <%= f.label :nome %>
+      <%= f.text_field :nome, class: "form-control", required: "required" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :contato %>
+      <%= f.text_field :contato, class: "form-control" %>
+    </div>
+    <div class="row"> 
+      <div class="form-group col-xs-3">
+        <%= f.label :telefone %>
+        <%= f.text_field :telefone, class: "form-control", required: "required", format:"(ddd) ddd-dddd" %>
+      </div>
+      <div class="form-group col-xs-3">
+        <%= f.label :celular %>
+        <%= f.text_field :celular, class: "form-control" %>
+      </div>
+      <div class="form-group col-xs-3">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control", type: "email" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :endereco %>
+      <%= f.text_field :endereco, class: "form-control" %>
+    </div>
+    <div class="row"> 
+        <div class="form-group col-xs-3">
+          <%= f.label :cidade %>
+          <%= f.text_field :cidade, class: "form-control" %>
+        </div>
+        <div class="form-group col-xs-3">
+          <%= f.label :estado %>
+          <%= f.select :estado, ['GO', 'AC','AL','AP','AM','BA','CE','DF','ES','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'], {}, class: "form-control" %>
+        </div>
+        <div class="form-group col-xs-3">
+          <%= f.label :cep %>
+          <%= f.text_field :cep, class: "form-control" %>
+        </div>
+    </div>
+    <div class="actions">
+      <%= f.submit  "Salvar", class: "btn btn-primary"%>
+    </div>
+  </div>
+</div>
+
+<% end %>
