@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto de agenda telefônica simples para controle em empresas ou para usuários residênciais que queiram organizar de forma mais sistematica.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Como a ideia é rodar em um ambiente de intranet ou residêncial a versão 0.1 não possui esta funcionalidade.
